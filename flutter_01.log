@@ -1,0 +1,67 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter create ?
+
+## exception
+
+FileSystemException: FileSystemException: Exists failed, path = '?' (OS Error: 檔案名稱、目錄名稱或磁碟區標籤語法錯誤。
+, errno = 123)
+
+```
+#0      _Directory.existsSync (dart:io/directory_impl.dart:99:7)
+#1      ForwardingFileSystemEntity.existsSync (package:file/src/forwarding/forwarding_file_system_entity.dart:45:33)
+#2      CreateCommand.runCommand (package:flutter_tools/src/commands/create.dart:247:22)
+<asynchronous suspension>
+#3      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:545:18)
+#4      _asyncThenWrapperHelper.<anonymous closure> (dart:async/runtime/libasync_patch.dart:77:64)
+#5      _rootRunUnary (dart:async/zone.dart:1132:38)
+#6      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#7      _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#8      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#9      Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#10     Future._complete (dart:async/future_impl.dart:473:7)
+#11     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#12     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async/runtime/libasync_patch.dart:33:20)
+#13     _rootRun (dart:async/zone.dart:1124:13)
+#14     _CustomZone.run (dart:async/zone.dart:1021:19)
+#15     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#16     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#17     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#18     _runPendingImmediateCallback (dart:isolate/runtime/libisolate_patch.dart:115:13)
+#19     _RawReceivePortImpl._handleMessage (dart:isolate/runtime/libisolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, v1.2.1, on Microsoft Windows [Version 10.0.17134.648], locale zh-TW)
+    [32m•[39m Flutter version 1.2.1 at D:\flutter\flutter
+    [32m•[39m Framework revision 8661d8aecd (8 weeks ago), 2019-02-14 19:19:53 -0800
+    [32m•[39m Engine revision 3757390fa4
+    [32m•[39m Dart version 2.1.2 (build 2.1.2-dev.0.0 0a7dcf17eb)
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+    [32m•[39m Android SDK at C:\Users\USER\AppData\Local\Android\sdk
+    [32m•[39m Android NDK location not configured (optional; useful for native profiling support)
+    [32m•[39m Platform android-28, build-tools 28.0.3
+    [32m•[39m Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1248-b01)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Android Studio (version 3.3)
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio
+    [32m•[39m Flutter plugin version 33.3.1
+    [32m•[39m Dart plugin version 182.5215
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1248-b01)
+
+[32m[✓][39m VS Code, 64-bit edition (version 1.32.1)
+    [32m•[39m VS Code at C:\Program Files\Microsoft VS Code
+    [32m•[39m Flutter extension version 2.25.0
+
+[33m[!][39m Connected device
+    [33m![39m No devices available
+
+[33m![39m Doctor found issues in 1 category.
+```
