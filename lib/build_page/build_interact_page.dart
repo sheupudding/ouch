@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
-import '../interact_page/announce.dart';
-import './build_interact_cell.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import '../interact_page/announce_forAdmin.dart';
+import '../interact_page/interact_forAdmin.dart';
+import '../interact_page/share_forAdmin.dart';
+import 'tryImage.dart';
 
-class InteractPage extends StatefulWidget {
+class Interact extends StatefulWidget {
+  Interact({Key key, this.userId, this.post})
+      : super(key: key);
+  final String userId;
+  final DocumentSnapshot post;
   @override
-  _InteractState createState() => _InteractState();
+  _InteractState createState() => _InteractState(userId: userId, post: post);
 }
 
-class _InteractState extends State<InteractPage> {
+class _InteractState extends State<Interact> {
+  _InteractState({Key key, this.userId, this.post});
+  final String userId;
+  final DocumentSnapshot post;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -15,22 +25,7 @@ class _InteractState extends State<InteractPage> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('烤肉趴'),
-          actions: <Widget>[
-            new Padding(
-              padding: EdgeInsets.all(15),
-              child: new Container(
-                width: 70.0,
-                decoration: BoxDecoration(
-                  borderRadius: new BorderRadius.circular(16.0),
-                  color: Colors.black12,
-                ),
-                child: Center(
-                  child: new Text('未報名'),
-                ),
-              ),
-            ),
-          ],
+          title: Text(post['title']),
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
@@ -46,7 +41,7 @@ class _InteractState extends State<InteractPage> {
                 child: new Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    new Icon(Icons.people),
+                    new Icon(Icons.dns),
                     new Text('功能模式'),
                   ],
                 ),
@@ -55,8 +50,8 @@ class _InteractState extends State<InteractPage> {
                 child: new Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    new Icon(Icons.announcement),
-                    new Text('意見回饋'),
+                    new Icon(Icons.forum),
+                    new Text('討論區'),
                   ],
                 ),
               ),
@@ -65,11 +60,10 @@ class _InteractState extends State<InteractPage> {
         ),
         body: TabBarView(
           children: <Widget>[
-            new AnnouncePage(),
-            new InteractCell(),
-            new Container(
-              color: Colors.lightGreen,
-            ),
+            new AnnouncePage(userId: userId, post: post),
+            new InteractPage(userId: userId, post: post),
+            new SharePage(userId: userId, post: post)
+            // new ImagePage()
           ],
         ),
       ),

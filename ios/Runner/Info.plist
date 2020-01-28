@@ -43,11 +43,18 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
- 	<string>Your prompt</string>
- 	<key>NSLocationAlwaysUsageDescription</key>
- 	<string>Your prompt</string>
- 	<key>NSLocationWhenInUseUsageDescription</key>
- 	<string>Your prompt</string>
+	
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>When In Use Permission</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Always Permission</string>
+	<key>NSLocationAlwaysAndWhenInUsageDescription</key>
+	<string>Always And In Use Permission</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Can I use the camera please?</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>USE_CALENDAR?</string>
+	<!-- <key>NSMicrophoneUsageDescription</key>
+	<string>Can I use the mic please?</string> -->
 </dict>
 </plist>

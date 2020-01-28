@@ -8,9 +8,9 @@ class BuildBottomPart extends StatelessWidget {
         fontSize: 10.0,
       ),
       tabs: [
-        Tab(icon: new Icon(Icons.art_track), text: ('活動')),
+        Tab(icon: new Icon(Icons.dashboard), text: ('活動')),
         Tab(
-          icon: Icon(Icons.pageview),
+          icon: Icon(Icons.insert_chart),
           text: ('情況掌握'),
         ),
         Tab(
@@ -22,8 +22,8 @@ class BuildBottomPart extends StatelessWidget {
           text: ('活動代碼'),
         ),
         Tab(
-          icon: new Icon(Icons.view_column),
-          text: ('活動設定'),
+          icon: Icon(Icons.photo),
+          text: ('相簿'),
         ),
       ],
       labelColor: Colors.amber[800],

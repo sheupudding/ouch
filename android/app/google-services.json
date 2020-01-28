@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "531045796559",
+    "firebase_url": "https://my-project-ouch.firebaseio.com",
+    "project_id": "my-project-ouch",
+    "storage_bucket": "my-project-ouch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531045796559:android:f948c2ca7db2ad7652c5ba",
+        "android_client_info": {
+          "package_name": "com.test.ouch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531045796559-vg37jr03mfdtpl04rmchimcppidnp9r3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI3kmj7owjNEh3CAH05o4azLEvnpLRCMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531045796559-vg37jr03mfdtpl04rmchimcppidnp9r3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
